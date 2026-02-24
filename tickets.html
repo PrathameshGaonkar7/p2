@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PSquare Art Gallery — Ticket Office</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="tickets.css" />
+</head>
+<body>
+
+  <!-- Cursor -->
+  <div class="cursor"      id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Navigation -->
+  <nav id="mainNav">
+    <a href="index.html" class="logo">P<span>²</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="exhibition.html">Exhibition</a></li>
+      <li><a href="tickets.html" class="active">Ticket Office</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="visit.html">Visit</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"       onclick="toggleMobileMenu()">Home</a>
+    <a href="gallery.html"    onclick="toggleMobileMenu()">Gallery</a>
+    <a href="exhibition.html" onclick="toggleMobileMenu()">Exhibition</a>
+    <a href="tickets.html"    onclick="toggleMobileMenu()">Ticket Office</a>
+    <a href="about.html"      onclick="toggleMobileMenu()">About Us</a>
+    <a href="visit.html"      onclick="toggleMobileMenu()">Visit</a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="page-header-eyebrow">Book Your Visit</div>
+    <h1 class="page-header-title">Ticket Office</h1>
+  </div>
+
+  <!-- Main Content -->
+  <div class="ticket-layout">
+
+    <!-- Left: Ticket selection + Date/Time -->
+    <div class="ticket-left">
+
+      <h2 class="ticket-section-title">Select Ticket Types</h2>
+      <div class="ticket-types" id="ticketTypes">
+        <!-- Rendered by tickets.js -->
+      </div>
+
+      <h2 class="ticket-section-title">Choose Date &amp; Time</h2>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="visitDate">Visit Date</label>
+          <input type="date" id="visitDate" />
+        </div>
+        <div class="form-group">
+          <label for="timeSlot">Time Slot</label>
+          <select id="timeSlot">
+            <option value="">Select a time</option>
+            <option>10:00 AM – 12:00 PM</option>
+            <option>12:00 PM – 2:00 PM</option>
+            <option>2:00 PM – 4:00 PM</option>
+            <option>4:00 PM – 6:00 PM</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right: Order Summary -->
+    <aside class="order-summary">
+      <div class="summary-title">Order Summary</div>
+      <div id="summaryLines"></div>
+      <div class="summary-line total">
+        <span>Total</span>
+        <span class="amount" id="totalAmount">₦0</span>
+      </div>
+      <button class="btn-book" id="bookBtn" onclick="handleBooking()" disabled>
+        Proceed to Checkout
+      </button>
+      <p class="booking-note">Secure payment · Instant e-ticket · Free cancellation up to 24 h before your visit</p>
+      <div class="booking-success" id="bookingSuccess">
+        <div class="check">✓</div>
+        <p>Booking Confirmed!<br />Check your email for your e-ticket.</p>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-brand">
+      <a href="index.html" class="logo">P<span>²</span></a>
+      <p>PSquare Art Gallery — champions of contemporary African art.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="exhibition.html">Exhibitions</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Visit</h4>
+      <ul><li><a href="visit.html">Location & Hours</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow</h4>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter / X</a></li>
+      </ul>
+    </div>
+  </footer>
+  <div class="footer-bottom">
+    <span>© 2024 PSquare Art Gallery. All rights reserved.</span>
+    <span>Privacy Policy · Terms of Use</span>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="nav.js"></script>
+  <script src="tickets.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PSquare Art Gallery — Visit</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="visit.css" />
+</head>
+<body>
+
+  <!-- Cursor -->
+  <div class="cursor"      id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Navigation -->
+  <nav id="mainNav">
+    <a href="index.html" class="logo">P<span>²</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="exhibition.html">Exhibition</a></li>
+      <li><a href="tickets.html">Ticket Office</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="visit.html" class="active">Visit</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"       onclick="toggleMobileMenu()">Home</a>
+    <a href="gallery.html"    onclick="toggleMobileMenu()">Gallery</a>
+    <a href="exhibition.html" onclick="toggleMobileMenu()">Exhibition</a>
+    <a href="tickets.html"    onclick="toggleMobileMenu()">Ticket Office</a>
+    <a href="about.html"      onclick="toggleMobileMenu()">About Us</a>
+    <a href="visit.html"      onclick="toggleMobileMenu()">Visit</a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="page-header-eyebrow">Come See Us</div>
+    <h1 class="page-header-title">Plan Your Visit</h1>
+  </div>
+
+  <!-- Map + Contact Info -->
+  <div class="visit-grid">
+
+    <!-- Map column -->
+    <div>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.758862631977!2d3.4221849!3d6.4280556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf53aec4dd92b%3A0xc98f9a5e2a1b0bc7!2sVictoria%20Island%2C%20Lagos!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <div class="contact-block" style="margin-top: 20px;">
+        <div class="contact-block-label">Address</div>
+        <div class="contact-block-content">
+          12 Ozumba Mbadiwe Avenue<br />
+          Victoria Island, Lagos, Nigeria
+        </div>
+      </div>
+    </div>
+
+    <!-- Info column -->
+    <div class="contact-info">
+
+      <div class="contact-block">
+        <div class="contact-block-label">Opening Hours</div>
+        <table class="hours-table">
+          <tr><td>Tuesday – Friday</td><td>10:00 AM – 6:00 PM</td></tr>
+          <tr><td>Saturday</td>         <td>10:00 AM – 8:00 PM</td></tr>
+          <tr><td>Sunday</td>           <td>12:00 PM – 5:00 PM</td></tr>
+          <tr><td class="closed">Monday</td><td class="closed">Closed</td></tr>
+        </table>
+      </div>
+
+      <div class="contact-block">
+        <div class="contact-block-label">Contact</div>
+        <div class="contact-block-content">
+          +234 (0) 812 345 6789<br />
+          <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="076f626b6b684777747672667562667573296960">[email&#160;protected]</a><br />
+          <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6b190e180e191d0a1f020405182b1b181a1e0a190e0a191f45050c">[email&#160;protected]</a>
+        </div>
+      </div>
+
+      <div class="contact-block">
+        <div class="contact-block-label">Getting Here</div>
+        <div class="contact-block-content">
+          <strong>By Car:</strong> Paid parking available on-site<br />
+          <strong>By Bus:</strong> BRT to Bonny Camp stop, 5 min walk<br />
+          <strong>By Boat:</strong> Water taxi to Five Cowries terminal
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <section class="contact-form-section">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="contact-form-heading">Send Us a Message</h2>
+
+    <div class="contact-form-grid">
+      <div class="form-group">
+        <label for="cName">Full Name</label>
+        <input type="text" id="cName" placeholder="Your name" />
+      </div>
+      <div class="form-group">
+        <label for="cEmail">Email Address</label>
+        <input type="email" id="cEmail" placeholder="your@email.com" />
+      </div>
+      <div class="form-group">
+        <label for="cSubject">Subject</label>
+        <input type="text" id="cSubject" placeholder="How can we help?" />
+      </div>
+      <div class="form-group">
+        <label for="cPhone">Phone (Optional)</label>
+        <input type="tel" id="cPhone" placeholder="+234 …" />
+      </div>
+      <div class="form-group form-full">
+        <label for="cMessage">Message</label>
+        <textarea id="cMessage" placeholder="Your message…"></textarea>
+      </div>
+    </div>
+
+    <button class="btn-submit" id="submitBtn" onclick="handleContactSubmit(this)">Send Message</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-brand">
+      <a href="index.html" class="logo">P<span>²</span></a>
+      <p>PSquare Art Gallery — champions of contemporary African art.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="exhibition.html">Exhibitions</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Book</h4>
+      <ul><li><a href="tickets.html">Tickets</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow</h4>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter / X</a></li>
+      </ul>
+    </div>

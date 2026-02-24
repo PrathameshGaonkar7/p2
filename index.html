@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PSquare Art Gallery — Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <!-- Cursor -->
+  <div class="cursor"      id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Navigation -->
+  <nav id="mainNav">
+    <a href="index.html" class="logo">P<span>²</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html"       data-page="index.html"       class="active">Home</a></li>
+      <li><a href="gallery.html"    data-page="gallery.html">Gallery</a></li>
+      <li><a href="exhibition.html" data-page="exhibition.html">Exhibition</a></li>
+      <li><a href="tickets.html"    data-page="tickets.html">Ticket Office</a></li>
+      <li><a href="about.html"      data-page="about.html">About Us</a></li>
+      <li><a href="visit.html"      data-page="visit.html">Visit</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"       onclick="toggleMobileMenu()">Home</a>
+    <a href="gallery.html"    onclick="toggleMobileMenu()">Gallery</a>
+    <a href="exhibition.html" onclick="toggleMobileMenu()">Exhibition</a>
+    <a href="tickets.html"    onclick="toggleMobileMenu()">Ticket Office</a>
+    <a href="about.html"      onclick="toggleMobileMenu()">About Us</a>
+    <a href="visit.html"      onclick="toggleMobileMenu()">Visit</a>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero-video-wrap">
+      <iframe
+        class="youtube-bg"
+        src="https://www.youtube.com/embed/mFY9ace2t4s?si=tqWD6i4OqA-0i-By&autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&playlist=mFY9ace2t4s"
+        title="Hero Background"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">Lagos · Nigeria · Est. 2014</div>
+      <h1 class="hero-title">Where Art<br>Finds Its <em>Voice</em></h1>
+      <p class="hero-sub">A sanctuary for contemporary African masters</p>
+      <div class="hero-btns">
+        <a href="gallery.html" class="btn btn-gold">Explore Gallery</a>
+        <a href="tickets.html" class="btn btn-outline">Book Tickets</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── FEATURES ── -->
+  <section class="home-features">
+    <div class="feature-item">
+      <div class="feature-num">01</div>
+      <h3 class="feature-title">Curated Excellence</h3>
+      <p class="feature-text">We partner with over 80 celebrated and emerging African artists, presenting works that challenge convention and ignite dialogue across generations.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">02</div>
+      <h3 class="feature-title">Living Heritage</h3>
+      <p class="feature-text">Our rotating exhibitions blend the ancient with the contemporary — honoring cultural roots while exploring the frontiers of modern expression.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">03</div>
+      <h3 class="feature-title">Experience Art</h3>
+      <p class="feature-text">From intimate guided tours to immersive evening galas, PSquare crafts moments that transform how you see and feel the world around you.</p>
+    </div>
+  </section>
+
+  <!-- ── QUOTE ── -->
+  <section class="home-quote">
+    <div class="quote-mark">"</div>
+    <p class="quote-text">Art is not what you see, but what you make others see. PSquare is our testament to that truth.</p>
+    <div class="quote-attr">— Dr. Amaka Osei, Founder</div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-brand">
+      <a href="index.html" class="logo">P<span>²</span></a>
+      <p>PSquare Art Gallery celebrates the power of African art and its ability to speak across cultures, centuries, and continents.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="exhibition.html">Exhibitions</a></li>
+        <li><a href="tickets.html">Tickets</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="visit.html">Location</a></li>
+        <li><a href="visit.html">Hours</a></li>
+        <li><a href="visit.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow</h4>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter / X</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </div>
+  </footer>
+  <div class="footer-bottom">
+    <span>© 2024 PSquare Art Gallery. All rights reserved.</span>
+    <span>Privacy Policy · Terms of Use</span>
+  </div>
+
+  <script src="nav.js"></script>
+</body>
+</html>

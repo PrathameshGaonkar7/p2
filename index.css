@@ -1,0 +1,153 @@
+/* ============================================================
+   PSquare Art Gallery — home.css
+   Styles specific to the Home page
+   ============================================================ */
+
+/* ── Hero Section ── */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-video-wrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.hero-video-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10,10,10,0.3) 0%,
+    rgba(10,10,10,0.55) 50%,
+    rgba(10,10,10,0.85) 100%
+  );
+}
+
+.youtube-bg {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 177.78vh; min-width: 100%;
+  height: 56.25vw; min-height: 100%;
+  pointer-events: none;
+  border: none;
+}
+
+.hero-content {
+  position: absolute; inset: 0; z-index: 2;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  text-align: center; padding: 40px;
+}
+
+.hero-eyebrow {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 20px;
+  animation: fadeUp 1s 0.3s both;
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.5rem, 9vw, 7rem);
+  font-weight: 300; line-height: 1.05;
+  letter-spacing: 0.04em; margin-bottom: 24px;
+  animation: fadeUp 1s 0.5s both;
+}
+.hero-title em { font-style: italic; color: var(--gold-light); }
+.hero-sub {
+  font-size: 0.8rem; letter-spacing: 0.2em;
+  color: rgba(248,244,239,0.65);
+  text-transform: uppercase; margin-bottom: 50px;
+  animation: fadeUp 1s 0.7s both;
+}
+.hero-btns {
+  display: flex; gap: 20px;
+  animation: fadeUp 1s 0.9s both;
+}
+
+.hero-scroll {
+  position: absolute; bottom: 40px; left: 50%;
+  transform: translateX(-50%); z-index: 2;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 10px;
+  animation: fadeUp 1s 1.2s both;
+}
+.hero-scroll span {
+  font-size: 0.6rem; letter-spacing: 0.3em;
+  color: rgba(248,244,239,0.5); text-transform: uppercase;
+}
+.scroll-line {
+  width: 1px; height: 50px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  animation: scrollLine 2s infinite;
+}
+
+/* ── Feature Strip ── */
+.home-features {
+  background: var(--dark);
+  padding: 100px 60px;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--border);
+}
+.feature-item {
+  padding: 60px 50px;
+  border-right: 1px solid var(--border);
+  transition: background 0.3s;
+}
+.feature-item:last-child { border-right: none; }
+.feature-item:hover { background: rgba(201,168,76,0.04); }
+
+.feature-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem; font-weight: 300;
+  color: rgba(201,168,76,0.2); line-height: 1;
+  margin-bottom: 20px;
+}
+.feature-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem; font-weight: 400;
+  margin-bottom: 14px;
+}
+.feature-text { font-size: 0.78rem; line-height: 1.85; color: var(--gray); }
+
+/* ── Quote ── */
+.home-quote {
+  padding: 120px 60px; text-align: center;
+  background: var(--darker);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.quote-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 8rem; line-height: 0.5;
+  color: rgba(201,168,76,0.15);
+}
+.quote-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  font-weight: 300; font-style: italic;
+  max-width: 800px; margin: 30px auto;
+  line-height: 1.5;
+}
+.quote-attr {
+  font-size: 0.68rem; letter-spacing: 0.3em;
+  color: var(--gold); text-transform: uppercase;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .home-features {
+    grid-template-columns: 1fr;
+    padding: 60px 30px;
+  }
+  .feature-item {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .home-quote { padding: 80px 30px; }
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PSquare Art Gallery — Exhibition</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="exhibition.css" />
+</head>
+<body>
+
+  <!-- Cursor -->
+  <div class="cursor"      id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Navigation -->
+  <nav id="mainNav">
+    <a href="index.html" class="logo">P<span>²</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="exhibition.html" class="active">Exhibition</a></li>
+      <li><a href="tickets.html">Ticket Office</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="visit.html">Visit</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"       onclick="toggleMobileMenu()">Home</a>
+    <a href="gallery.html"    onclick="toggleMobileMenu()">Gallery</a>
+    <a href="exhibition.html" onclick="toggleMobileMenu()">Exhibition</a>
+    <a href="tickets.html"    onclick="toggleMobileMenu()">Ticket Office</a>
+    <a href="about.html"      onclick="toggleMobileMenu()">About Us</a>
+    <a href="visit.html"      onclick="toggleMobileMenu()">Visit</a>
+  </div>
+
+  <!-- Exhibition Hero -->
+  <section class="exhibition-hero">
+    <div class="exhibition-hero-content">
+      <div class="page-header-eyebrow">Current & Upcoming</div>
+      <h1 class="page-header-title">Exhibitions</h1>
+      <div class="divider-gold" style="margin: 20px auto;"></div>
+      <p class="hero-sub-text">Immersive experiences crafted at the intersection of heritage and innovation</p>
+    </div>
+  </section>
+
+  <!-- Exhibition Cards -->
+  <div class="exhibition-grid">
+
+    <div class="exhibition-card">
+      <div class="exhibition-card-img">
+        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600&q=80" alt="Echoes of Ancestry" loading="lazy" />
+      </div>
+      <div class="exhibition-card-body">
+        <span class="exhibition-status status-current">Now Showing</span>
+        <h3 class="exhibition-card-title">Echoes of Ancestry</h3>
+        <div class="exhibition-card-date">Jan 15 – Mar 30, 2025</div>
+        <p class="exhibition-card-desc">A profound journey through West African spiritual traditions rendered in contemporary mixed media by 12 celebrated artists from Nigeria, Ghana, and Senegal.</p>
+      </div>
+    </div>
+
+    <div class="exhibition-card">
+      <div class="exhibition-card-img">
+        <img src="https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=600&q=80" alt="Urban Futures" loading="lazy" />
+      </div>
+      <div class="exhibition-card-body">
+        <span class="exhibition-status status-current">Now Showing</span>
+        <h3 class="exhibition-card-title">Urban Futures</h3>
+        <div class="exhibition-card-date">Feb 1 – Apr 15, 2025</div>
+        <p class="exhibition-card-desc">Lagos, Nairobi, Accra — the modern African city through the eyes of emerging visual artists who inhabit its contradictions daily.</p>
+      </div>
+    </div>
+
+    <div class="exhibition-card">
+      <div class="exhibition-card-img">
+        <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=600&q=80" alt="Fabric & Form" loading="lazy" />
+      </div>
+      <div class="exhibition-card-body">
+        <span class="exhibition-status status-closing">Closing Soon</span>
+        <h3 class="exhibition-card-title">Fabric &amp; Form</h3>
+        <div class="exhibition-card-date">Nov 10, 2024 – Feb 28, 2025</div>
+        <p class="exhibition-card-desc">Textile traditions reimagined through sculpture and installation — closing in days. Last chance to witness this landmark exhibition.</p>
+      </div>
+    </div>
+
+    <div class="exhibition-card">
+      <div class="exhibition-card-img">
+        <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=600&q=80" alt="The Quiet Revolution" loading="lazy" />
+      </div>
+      <div class="exhibition-card-body">
+        <span class="exhibition-status status-upcoming">Coming April</span>
+        <h3 class="exhibition-card-title">The Quiet Revolution</h3>
+        <div class="exhibition-card-date">Apr 20 – Jul 10, 2025</div>
+        <p class="exhibition-card-desc">Featuring 20 female-identifying artists from across the continent redefining the visual language of resistance and resilience through painting.</p>
+      </div>
+    </div>
+
+    <div class="exhibition-card">
+      <div class="exhibition-card-img">
+        <img src="https://images.unsplash.com/photo-1554907984-15263bfd63bd?w=600&q=80" alt="Afrofuturism Now" loading="lazy" />
+      </div>
+      <div class="exhibition-card-body">
+        <span class="exhibition-status status-upcoming">Coming June</span>
+        <h3 class="exhibition-card-title">Afrofuturism Now</h3>
+        <div class="exhibition-card-date">Jun 1 – Sep 30, 2025</div>
+        <p class="exhibition-card-desc">A landmark survey of Afrofuturist art — imagining African futures through technology, mythology, and radical optimism. Our most ambitious show to date.</p>
+      </div>
+    </div>
+
+    <div class="exhibition-card">
+      <div class="exhibition-card-img">
+        <img src="https://images.unsplash.com/photo-1578926288207-a90a5366759d?w=600&q=80" alt="Permanent Collection" loading="lazy" />
+      </div>
+      <div class="exhibition-card-body">
+        <span class="exhibition-status status-current">Ongoing</span>
+        <h3 class="exhibition-card-title">Permanent Collection</h3>
+        <div class="exhibition-card-date">Year-Round</div>
+        <p class="exhibition-card-desc">Over 300 works spanning five decades of African art history — from the post-independence era to the digital present. The heart of PSquare Gallery.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-brand">
+      <a href="index.html" class="logo">P<span>²</span></a>
+      <p>PSquare Art Gallery — champions of contemporary African art.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="tickets.html">Tickets</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Visit</h4>
+      <ul><li><a href="visit.html">Location & Hours</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow</h4>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter / X</a></li>
+      </ul>
+    </div>
+  </footer>
+  <div class="footer-bottom">
+    <span>© 2024 PSquare Art Gallery. All rights reserved.</span>
+    <span>Privacy Policy · Terms of Use</span>
+  </div>
+
+  <script src="nav.js"></script>
+</body>
+</html>

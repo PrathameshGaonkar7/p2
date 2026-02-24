@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PSquare Art Gallery — About Us</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="about.css" />
+</head>
+<body>
+
+  <!-- Cursor -->
+  <div class="cursor"      id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Navigation -->
+  <nav id="mainNav">
+    <a href="index.html" class="logo">P<span>²</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="exhibition.html">Exhibition</a></li>
+      <li><a href="tickets.html">Ticket Office</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="visit.html">Visit</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"       onclick="toggleMobileMenu()">Home</a>
+    <a href="gallery.html"    onclick="toggleMobileMenu()">Gallery</a>
+    <a href="exhibition.html" onclick="toggleMobileMenu()">Exhibition</a>
+    <a href="tickets.html"    onclick="toggleMobileMenu()">Ticket Office</a>
+    <a href="about.html"      onclick="toggleMobileMenu()">About Us</a>
+    <a href="visit.html"      onclick="toggleMobileMenu()">Visit</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="about-hero">
+    <div class="about-hero-bg"></div>
+    <div class="about-hero-text">
+      <div class="section-label">Est. 2014 · Lagos, Nigeria</div>
+      <h1 class="about-hero-title">
+        We Are PSquare —<br>
+        Champions of <em>African Art</em>
+      </h1>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="about-stats">
+    <div class="stat-item"><div class="stat-num">10+</div><div class="stat-label">Years of Excellence</div></div>
+    <div class="stat-item"><div class="stat-num">300+</div><div class="stat-label">Artworks in Collection</div></div>
+    <div class="stat-item"><div class="stat-num">80+</div><div class="stat-label">Artists Represented</div></div>
+    <div class="stat-item"><div class="stat-num">50k+</div><div class="stat-label">Annual Visitors</div></div>
+  </div>
+
+  <!-- Story + Mission -->
+  <div class="about-body">
+    <div class="about-section">
+      <h3>Our Story</h3>
+      <p>PSquare Art Gallery was born from a singular conviction: that African art deserves a stage as grand and enduring as any in the world. Founded in 2014 by Dr. Amaka Osei and architect Kwame Asante, the gallery opened its doors in a converted colonial warehouse in Victoria Island, Lagos — a space as layered with history as the works it now houses.</p>
+      <p>From the beginning, we refused to confine ourselves to any single definition of African art. Our collection spans oil paintings and digital installations, traditional sculpture and conceptual photography — united by the authenticity of their makers' voices.</p>
+      <p>Today, PSquare is not merely a gallery but a living institution: a meeting ground for collectors, educators, students, and curious minds seeking to encounter the full complexity of the African creative spirit.</p>
+    </div>
+    <div class="about-section">
+      <h3>Our Mission</h3>
+      <p>We exist to amplify African artistic excellence — to ensure that the stories told on our walls reach every corner of the world while remaining deeply rooted in the communities that inspired them.</p>
+      <p>We believe art is not a luxury. It is a necessity — the clearest mirror we have to understand who we are, where we've been, and who we might become. PSquare is committed to making that mirror accessible to all.</p>
+      <p>Through residencies, educational partnerships with 15 schools and universities, and our annual young artists prize, we invest in the next generation of voices that will define African creativity for decades to come.</p>
+    </div>
+  </div>
+
+  <!-- Team -->
+  <section class="team-section">
+    <div class="section-label">The People</div>
+    <h2 class="team-heading">Our Leadership</h2>
+    <div class="divider-gold"></div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">A</div>
+        <div class="team-name">Dr. Amaka Osei</div>
+        <div class="team-role">Co-Founder &amp; Director</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">K</div>
+        <div class="team-name">Kwame Asante</div>
+        <div class="team-role">Co-Founder &amp; Creative Director</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">F</div>
+        <div class="team-name">Fatima Al-Hassan</div>
+        <div class="team-role">Chief Curator</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">C</div>
+        <div class="team-name">Chidi Eze</div>
+        <div class="team-role">Head of Acquisitions</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-brand">
+      <a href="index.html" class="logo">P<span>²</span></a>
+      <p>PSquare Art Gallery — champions of contemporary African art.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="exhibition.html">Exhibitions</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Visit</h4>
+      <ul><li><a href="visit.html">Location & Hours</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow</h4>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter / X</a></li>
+      </ul>
+    </div>
+  </footer>
+  <div class="footer-bottom">
+    <span>© 2024 PSquare Art Gallery. All rights reserved.</span>
+    <span>Privacy Policy · Terms of Use</span>
+  </div>
+
+  <script src="nav.js"></script>
+</body>
+</html>

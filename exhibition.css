@@ -1,0 +1,81 @@
+/* ============================================================
+   PSquare Art Gallery — exhibition.css
+   ============================================================ */
+
+body { background: var(--dark); }
+
+/* ── Hero Banner ── */
+.exhibition-hero {
+  height: 50vh; position: relative; overflow: hidden;
+  background: var(--darker);
+  display: flex; align-items: center; justify-content: center;
+  border-bottom: 1px solid var(--border);
+}
+.exhibition-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent, transparent 80px,
+    rgba(201,168,76,0.03) 80px, rgba(201,168,76,0.03) 81px
+  );
+}
+.exhibition-hero-content {
+  text-align: center; position: relative; z-index: 1;
+  animation: fadeUp 1s 0.3s both;
+}
+.hero-sub-text {
+  color: var(--gray); font-size: 0.8rem; letter-spacing: 0.12em;
+  margin-top: 10px;
+}
+
+/* ── Grid ── */
+.exhibition-grid {
+  padding: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+/* ── Card ── */
+.exhibition-card {
+  border: 1px solid var(--border); overflow: hidden;
+  transition: border-color 0.4s, transform 0.4s;
+  background: rgba(255,255,255,0.02);
+}
+.exhibition-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-6px);
+}
+
+.exhibition-card-img { height: 220px; overflow: hidden; background: var(--darker); }
+.exhibition-card-img img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.6s;
+}
+.exhibition-card:hover .exhibition-card-img img { transform: scale(1.05); }
+
+.exhibition-card-body { padding: 28px; }
+
+/* Status badges */
+.exhibition-status {
+  display: inline-block;
+  padding: 4px 12px; margin-bottom: 14px;
+  font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+}
+.status-current { background: rgba(201,168,76,0.15); color: var(--gold);   border: 1px solid rgba(201,168,76,0.3); }
+.status-upcoming{ background: rgba(255,255,255,0.05); color: var(--gray);  border: 1px solid var(--border); }
+.status-closing { background: rgba(200,60,60,0.12);  color: #e07070;       border: 1px solid rgba(200,60,60,0.25); }
+
+.exhibition-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 400; margin-bottom: 8px;
+}
+.exhibition-card-date {
+  font-size: 0.68rem; color: var(--gold); letter-spacing: 0.15em; margin-bottom: 12px;
+}
+.exhibition-card-desc { font-size: 0.75rem; line-height: 1.85; color: var(--gray); }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .exhibition-grid { padding: 24px 20px; }
+}

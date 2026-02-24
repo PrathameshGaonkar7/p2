@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PSquare Art Gallery — Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="gallery.css" />
+</head>
+<body>
+
+  <!-- Cursor -->
+  <div class="cursor"      id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Navigation -->
+  <nav id="mainNav">
+    <a href="index.html" class="logo">P<span>²</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html"    class="active">Gallery</a></li>
+      <li><a href="exhibition.html">Exhibition</a></li>
+      <li><a href="tickets.html">Ticket Office</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="visit.html">Visit</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"       onclick="toggleMobileMenu()">Home</a>
+    <a href="gallery.html"    onclick="toggleMobileMenu()">Gallery</a>
+    <a href="exhibition.html" onclick="toggleMobileMenu()">Exhibition</a>
+    <a href="tickets.html"    onclick="toggleMobileMenu()">Ticket Office</a>
+    <a href="about.html"      onclick="toggleMobileMenu()">About Us</a>
+    <a href="visit.html"      onclick="toggleMobileMenu()">Visit</a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="page-header-eyebrow">Our Collection</div>
+    <h1 class="page-header-title">The Gallery</h1>
+  </div>
+
+  <!-- Controls -->
+  <div class="gallery-controls">
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input
+        type="text"
+        id="gallerySearch"
+        placeholder="Search paintings, artists, styles…"
+        oninput="filterGallery()"
+      />
+    </div>
+    <div class="filter-tabs">
+      <button class="filter-btn active" onclick="setFilter(this,'all')">All</button>
+      <button class="filter-btn" onclick="setFilter(this,'portrait')">Portrait</button>
+      <button class="filter-btn" onclick="setFilter(this,'abstract')">Abstract</button>
+      <button class="filter-btn" onclick="setFilter(this,'landscape')">Landscape</button>
+      <button class="filter-btn" onclick="setFilter(this,'cultural')">Cultural</button>
+    </div>
+  </div>
+
+  <!-- Grid -->
+  <div class="gallery-grid" id="galleryGrid"></div>
+  <div class="no-results"   id="noResults">No artworks found matching your search.</div>
+
+  <!-- Art Detail Modal -->
+  <div class="modal-overlay" id="artModal">
+    <div class="modal-inner">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-img">
+        <img id="modalImg" src="" alt="" />
+      </div>
+      <div class="modal-info">
+        <div  class="modal-eyebrow" id="modalCategory"></div>
+        <h2   class="modal-title"   id="modalTitle"></h2>
+        <div  class="modal-year"    id="modalYear"></div>
+        <div  class="modal-divider"></div>
+        <p    class="modal-desc"    id="modalDesc"></p>
+        <div  class="modal-tags"    id="modalTags"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-brand">
+      <a href="index.html" class="logo">P<span>²</span></a>
+      <p>PSquare Art Gallery — champions of contemporary African art.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="exhibition.html">Exhibitions</a></li>
+        <li><a href="tickets.html">Tickets</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Visit</h4>
+      <ul><li><a href="visit.html">Location & Hours</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow</h4>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter / X</a></li>
+      </ul>
+    </div>
+  </footer>
+  <div class="footer-bottom">
+    <span>© 2024 PSquare Art Gallery. All rights reserved.</span>
+    <span>Privacy Policy · Terms of Use</span>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="nav.js"></script>
+  <script src="gallery.js"></script>
+</body>
+</html>

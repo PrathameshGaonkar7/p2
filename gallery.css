@@ -1,0 +1,119 @@
+/* ============================================================
+   PSquare Art Gallery — gallery.css
+   ============================================================ */
+
+body { background: var(--dark); }
+
+/* ── Search & Filter Bar ── */
+.gallery-controls {
+  padding: 40px 60px 20px;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 20px;
+  background: var(--dark);
+  border-bottom: 1px solid var(--border);
+}
+
+.search-wrap { position: relative; flex: 1; max-width: 380px; }
+.search-wrap input {
+  width: 100%;
+  padding: 13px 20px 13px 45px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem; outline: none;
+  transition: border-color 0.3s;
+}
+.search-wrap input:focus   { border-color: var(--gold); }
+.search-wrap input::placeholder { color: var(--gray); }
+.search-icon {
+  position: absolute; left: 15px; top: 50%;
+  transform: translateY(-50%);
+  color: var(--gray); font-size: 1.1rem;
+  pointer-events: none;
+}
+
+.filter-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+.filter-btn {
+  padding: 9px 20px;
+  background: transparent; border: 1px solid var(--border);
+  color: var(--gray); font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+  cursor: pointer; transition: all 0.3s;
+}
+.filter-btn:hover,
+.filter-btn.active {
+  border-color: var(--gold); color: var(--gold);
+  background: rgba(201,168,76,0.06);
+}
+
+/* ── Gallery Grid ── */
+.gallery-grid {
+  padding: 40px 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 3px;
+}
+
+.gallery-item {
+  position: relative; overflow: hidden;
+  aspect-ratio: 3 / 4; cursor: pointer;
+  background: var(--darker);
+}
+.gallery-item.wide { grid-column: span 2; aspect-ratio: 16 / 9; }
+
+.gallery-item img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94), filter 0.5s;
+  filter: brightness(0.85) saturate(0.9);
+}
+.gallery-item:hover img {
+  transform: scale(1.06);
+  filter: brightness(0.55) saturate(1.1);
+}
+
+.gallery-item-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(10,10,10,0.9) 0%, transparent 60%);
+  opacity: 0; transition: opacity 0.4s;
+  display: flex; flex-direction: column;
+  justify-content: flex-end; padding: 28px;
+}
+.gallery-item:hover .gallery-item-overlay { opacity: 1; }
+
+.gallery-item-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 400;
+  color: var(--white); margin-bottom: 6px;
+}
+.gallery-item-meta {
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  color: var(--gold); text-transform: uppercase;
+}
+
+.gallery-item-view {
+  position: absolute; top: 20px; right: 20px;
+  width: 42px; height: 42px;
+  background: rgba(201,168,76,0.9);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transform: scale(0.8);
+  transition: all 0.3s; color: var(--black); font-size: 1.1rem;
+}
+.gallery-item:hover .gallery-item-view { opacity: 1; transform: scale(1); }
+
+/* ── No Results ── */
+.no-results {
+  padding: 80px 60px; text-align: center;
+  color: var(--gray);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  display: none;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .gallery-controls { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+  .search-wrap { max-width: 100%; width: 100%; }
+  .gallery-grid { padding: 16px; grid-template-columns: repeat(2, 1fr); }
+  .gallery-item.wide { grid-column: span 2; }
+}

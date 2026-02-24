@@ -1,0 +1,104 @@
+/* ============================================================
+   PSquare Art Gallery — about.css
+   ============================================================ */
+
+body { background: var(--dark); }
+
+/* ── Hero ── */
+.about-hero {
+  height: 60vh; position: relative; overflow: hidden;
+  display: flex; align-items: flex-end;
+  padding: 80px 60px;
+}
+.about-hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.08) 0%, transparent 70%),
+    linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+}
+.about-hero-text { position: relative; z-index: 1; animation: fadeUp 0.9s 0.2s both; }
+.about-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 300; line-height: 1.1; margin-top: 10px;
+}
+.about-hero-title em { font-style: italic; color: var(--gold-light); }
+
+/* ── Stats Bar ── */
+.about-stats {
+  padding: 0; background: var(--darker);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+}
+.stat-item {
+  padding: 50px 20px;
+  border-right: 1px solid var(--border);
+  transition: background 0.3s;
+}
+.stat-item:last-child { border-right: none; }
+.stat-item:hover { background: rgba(201,168,76,0.04); }
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem; font-weight: 300;
+  color: var(--gold); line-height: 1;
+}
+.stat-label {
+  font-size: 0.65rem; letter-spacing: 0.25em;
+  color: var(--gray); text-transform: uppercase; margin-top: 10px;
+}
+
+/* ── Body Copy ── */
+.about-body {
+  padding: 80px 60px;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+.about-section h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem; font-weight: 400;
+  margin-bottom: 22px;
+}
+.about-section p {
+  font-size: 0.82rem; line-height: 2;
+  color: rgba(248,244,239,0.7); margin-bottom: 20px;
+}
+
+/* ── Team ── */
+.team-section {
+  padding: 80px 60px;
+  border-top: 1px solid var(--border);
+  background: var(--darker);
+}
+.team-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem; font-weight: 300; margin-bottom: 6px;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px; margin-top: 40px;
+}
+.team-card { text-align: center; }
+.team-avatar {
+  width: 100px; height: 100px;
+  margin: 0 auto 16px; border-radius: 50%;
+  background: var(--dark); border: 2px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem; color: var(--gold);
+  transition: border-color 0.3s;
+}
+.team-card:hover .team-avatar { border-color: var(--gold); }
+.team-name { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; margin-bottom: 5px; }
+.team-role { font-size: 0.65rem; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .about-hero  { height: auto; padding: 120px 30px 50px; }
+  .about-stats { grid-template-columns: 1fr 1fr; }
+  .stat-item:nth-child(2) { border-right: none; }
+  .about-body { grid-template-columns: 1fr; gap: 40px; padding: 40px 30px; }
+  .team-section { padding: 50px 30px; }
+}
